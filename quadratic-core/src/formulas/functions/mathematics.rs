@@ -83,7 +83,7 @@ fn get_functions() -> Vec<FormulaFunction> {
         formula_fn!(
             /// Returns the monthly payment for a loan based on constant payments
             /// and a constant interest rate.
-            #[examples("RYAN_PMT(0.01, 12, 1000, 0)")]
+            #[examples("RYAN_PMT(0.034/12, 60, 30000, 0)")]
             fn RYAN_PMT(rate: f64, nper: f64, pv: f64, fv: f64) {
                 let result = util::pmt(rate, nper, pv, fv);
                 result
